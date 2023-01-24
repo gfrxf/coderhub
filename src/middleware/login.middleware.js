@@ -48,7 +48,7 @@ const verifyAuth = async (ctx,next) =>{
         return ctx.app.emit('error',UNAUTHORIZATION,ctx)
     }
     const token = authorization.replace('Bearer ','')
-    console.log(token,'sendtoken');
+    // console.log(token,'sendtoken');
        // 2.验证token是否是有效
     try{
          // 2.1.获取token中信息
@@ -57,7 +57,7 @@ const verifyAuth = async (ctx,next) =>{
         
           
          })
-         console.log(result,'result');
+        //  console.log(result,'result');
            // 2.将token的信息保留下来
          ctx.user =result 
            // 3.执行下一个中间件
