@@ -1,8 +1,8 @@
 const koa = require('koa')
-const userRouter = require('../router/user.router')
+// const userRouter = require('../router/user.router')
 const bodyParser = require('koa-bodyparser')
-const loginRouter = require('../router/login.router')
-const registerRouters = require('../router')
+// const loginRouter = require('../router/login.router')
+const registerRouters = require('../router/index')
 // 1.创建app
 const app = new koa()
 
