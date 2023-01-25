@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "user": {
+            "id": 8,
+            "name": "dx"
+        },
+        "content": "Kobe说：坤坤打球太帅了",
+        "commentId": null
+    },
+    {
+        "id": 2,
+        "user": {
+            "id": 8,
+            "name": "dx"
+        },
+        "content": "雀食帅呀,尤其是那个转身，111不愧是你小坤坤",
+        "commentId": 1
+    }
+]
