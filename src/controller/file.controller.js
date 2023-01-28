@@ -1,5 +1,5 @@
 const fileService = require("../service/file.service");
-const { SERVER_PORT, SERVER_HOST } = require("../config/server");
+const { SERVE_PORT, SERVER_HOST } = require("../config/server.js");
 const UserService = require("../service/user.service");
 class HomeController {
   async create(ctx, next) {
@@ -13,8 +13,8 @@ class HomeController {
       const result = await fileService.create(filename, mimetype, size, id);
 
       // 3.将头像的地址信息, 保存到user表中
-      console.log(SERVER_PORT, SERVER_HOST);
-      const avatarUrl = `${SERVER_HOST}:${SERVER_PORT}/users/avatar/${id}`;
+      console.log(SERVE_PORT, SERVER_HOST);
+      const avatarUrl = `${SERVER_HOST}:${SERVE_PORT}/users/avatar/${id}`;
       const result2 = await UserService.updateUserAvatar(avatarUrl, id);
       // 3.返回结果
       ctx.body = {

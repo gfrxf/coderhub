@@ -7,7 +7,8 @@ doyenv.config()
 // console.log(process.env);
 
 module.exports= {
-    SERVE_PORT
+    SERVE_PORT,
+    SERVER_HOST
 } = process.env
 
 
